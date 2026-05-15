@@ -203,7 +203,8 @@ def extract_prices(items):
 ### `sorted` с `lambda`
 
 ```python
-return sorted(items, key=lambda item: item[field])
+def sort_items(items, field):
+    return sorted(items, key=lambda item: item[field])
 ```
 
 ### Замыкание
@@ -311,3 +312,16 @@ Settings → Branches → Branch protection rules → Add rule
 | Замыкание | `create_custom_field_filter()` |
 | pathlib | `src/config.py`, `src/data_io.py` |
 | PEP 8 | Код разбит на модули, имена в `snake_case` |
+
+## Быстрый запуск на Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env.example .env
+python src/main.py
+```
+
+После запуска пользователь может создать коллекцию, добавить предметы,
+посмотреть сводку, выполнить экспорт в ZIP и создать резервную копию базы.
