@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# App artifacts
+*.sqlite
+*.sqlite3
+data/
+backups/
+exports/
+app.log
+
+# Secrets / local config
+.env
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
